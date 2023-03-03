@@ -1,0 +1,13 @@
+.image-wrapper {
+  padding-top: 100%;
+}
+
+#contact-tab.active {
+  + .extra-tabs {
+    display: flex;
+  }
+}
+
+.extra-tabs {
+  display: none;
+}

@@ -1,0 +1,99 @@
+* {
+  color: white;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/bg-mobile.svg");
+  background-color: hsl(257, 40%, 49%);
+  background-size: cover;
+}
+
+header nav img {
+  width: 200px;
+  margin: 0.5rem;
+}
+
+main {
+  width: calc(100vw - 2rem);
+  margin: auto;
+}
+
+main section img {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+section h1,
+section p {
+  text-align: center;
+}
+
+.button--primary {
+  padding: 0.5rem 1rem;
+  border-radius: 4rem;
+  background-color: white;
+  color: hsl(257, 40%, 49%);
+  border: none;
+  height: 60px;
+  width: 70%;
+  box-shadow: 3px 3px 3px #333;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: inline-block;
+  mask-size: cover;
+  -webkit-mask-image: url("../images/fb-logo.svg");
+}
+
+@media only screen and (min-width: 768px) {
+  /*tablets*/
+}
+
+@media only screen and (min-width: 992px) {
+  /*escritorio*/
+  body {
+    background-image: url("../images/bg-desktop.svg");
+  }
+  section div {
+    width: calc(50% - 2rem);
+    display: inline-block;
+    vertical-align: top;
+  }
+  main {
+    max-width: 992px;
+  }
+}
+
+.display-flex {
+  display: flex;
+}
+.flex-container {
+  display: flex;
+  width: 70vw;
+  height: 50vh;
+  margin: auto;
+  border: 1px solid red;
+}
+.square {
+  border: 1px solid red;
+  background-color: gray;
+  width: 100px;
+  height: 20px;
+}

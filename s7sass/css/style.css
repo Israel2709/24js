@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: arial;
+}
+
+body {
+  background-color: navy;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+body main {
+  width: 80vw;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main aside {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+body main aside .profile-card {
+  background: blue;
+  border-radius: 1rem;
+}
+
+body main aside .profile-card .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  background-color: skyblue;
+  height: 200px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main aside .profile-card .profile img {
+  width: 50px;
+  border-radius: 100%;
+  margin-bottom: 1rem;
+}
+
+body main aside .profile-card .selector {
+  list-style: none;
+  color: gray;
+  padding: 1rem;
+}
+
+body main aside .profile-card .selector li.active {
+  color: white;
+}
+
+body main section {
+  width: 100%;
+}
+
+.card {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: salmon;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 300px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.card .content {
+  height: 200px;
+  padding: 1rem;
+  background-color: skyblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.card .content .heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .content .time-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card.exercise {
+  background-color: peru;
+}
+
+.card.play {
+  background-color: slategray;
+}
+
+.card.study {
+  background-color: darkred;
+}
+
+.card.care {
+  background-color: pink;
+}
+
+.card.work {
+  background-color: green;
+}
+
+.card.social {
+  background-color: purple;
+}
+
+@media only screen and (min-width: 992px) {
+  body main aside {
+    width: 30%;
+  }
+  body main section {
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .card {
+    width: 30%;
+  }
+  .card .content .time-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */

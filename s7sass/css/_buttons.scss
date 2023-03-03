@@ -1,0 +1,21 @@
+@import "./_colors.scss";
+@each $name, $color in $colors {
+  .btn-#{$name} {
+    background-color: $color;
+  }
+  .text-#{$name} {
+    color: $color;
+  }
+  .border-#{$name} {
+    border-color: $color;
+  }
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  height: 40px;
+  border-radius: 0.5rem;
+  border: none;
+  width: 100px;
+  color: white;
+}

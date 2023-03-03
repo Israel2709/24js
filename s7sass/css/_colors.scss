@@ -1,0 +1,15 @@
+$primaryColor: #6038e4;
+$secondaryColor: #659874;
+$successColor: #12cd1b;
+$warningColor: #ce7c18;
+$errorColor: darkred;
+$spacer: 1.5rem;
+
+$colors: (
+  "primary": $primaryColor,
+  "secondary": $secondaryColor,
+  "success": $successColor,
+  "warning": $warningColor,
+  "error": $errorColor,
+  "empty": unset,
+);

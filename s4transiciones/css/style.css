@@ -1,0 +1,146 @@
+@keyframes avanceDeRueda {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes giroDeRayos {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+.circunferencia {
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  border: 20px solid black;
+  position: relative;
+  animation: avanceDeRueda 5s linear infinite;
+}
+
+.rayos {
+  width: 400px;
+  height: 20px;
+  background-color: black;
+  display: none;
+}
+
+.circunferencia .rayos:first-of-type {
+  position: absolute;
+  top: 190px;
+  background-color: peru;
+}
+
+.circunferencia .rayos:nth-of-type(2) {
+  position: absolute;
+  background-color: purple;
+  top: 190px;
+  transform: rotateZ(90deg);
+}
+.circunferencia .rayos:nth-of-type(3) {
+  position: absolute;
+  background-color: slateblue;
+  top: 190px;
+  transform: rotateZ(45deg);
+}
+.circunferencia .rayos:last-of-type {
+  position: absolute;
+  background-color: green;
+  top: 190px;
+  transform: rotateZ(-45deg);
+}
+.rin {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  animation: giroDeRayos 5s linear infinite;
+  border-radius: 100%;
+  background-image: url("https://i.pinimg.com/originals/12/7a/ee/127aeec89eceb038f804f2bbb664788b.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.trans-card {
+  width: 100px;
+  height: 100px;
+  border: 1px solid red;
+  transition: all 1s ease;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+button {
+  width: 50px;
+  transition: all 1s ease;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 25px);
+}
+
+/*.trans-card:hover {
+  width: 200px;
+}*/
+
+.trans-card:hover button {
+  bottom: -20px;
+  width: 100%;
+  left: 0;
+}
+
+/*
+.card1 {
+  animation: card1 5s ease infinite;
+}
+
+.card2 {
+  animation: card2 5s ease infinite;
+}
+*/
+
+@keyframes card1 {
+  0% {
+    width: 100px;
+  }
+  25% {
+    width: 200px;
+  }
+  50% {
+    width: 100px;
+  }
+  75% {
+    width: 100px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+@keyframes card2 {
+  0% {
+    width: 100px;
+  }
+  25% {
+    width: 100px;
+  }
+  50% {
+    width: 100px;
+  }
+  75% {
+    width: 200px;
+  }
+  100% {
+    width: 100px;
+  }
+}

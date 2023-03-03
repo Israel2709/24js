@@ -1,0 +1,52 @@
+/*Selector universal: selecciona todos los elementos de mi html*/
+* {
+  font-family: arial;
+}
+
+/*Selector por tagname: Selecciona aquellos elementos que coincidan con el tagname indicado*/
+
+li {
+  color: peru;
+}
+
+/*Selector por clase: Selecciona todos los elementos que contengan el nombre de la clase en su atributo class ( que pertenezcan a una clase específica )*/
+
+.main-text {
+  font-size: 2rem;
+  color: darkred;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.border-and-shadow {
+  border: 1px solid red;
+  box-shadow: 3px 3px 3px 5px #aaa;
+}
+
+/*Selector por ID:Selecciona aquel único elemento que contenga el identificador en su atributo ID*/
+#main-list {
+  list-style: none;
+  padding: 0;
+  border: 2px solid purple;
+}
+
+.button-primary {
+  background-color: navy;
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  transition: all 1s ease;
+}
+
+.button-primary:hover {
+  background-color: peru;
+  color: #333;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}

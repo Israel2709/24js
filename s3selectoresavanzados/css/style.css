@@ -1,0 +1,75 @@
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.border-peru {
+  border: 1px solid peru;
+}
+
+/*Anidación*/
+ol li {
+  border: 1px solid peru;
+}
+
+#first-list li {
+  padding: 1rem;
+}
+
+.list {
+  list-style: circle;
+}
+
+/*Conjunción*/
+.list.custom-list {
+  list-style-type: square;
+  background-color: lightgray;
+}
+
+/*Selector de descendiente directo*/
+.list > * {
+  border: 1px solid white;
+  padding: 0.5rem 1rem;
+}
+
+/*Selector de elemnto adyacente*/
+#seleccion + li {
+  border-color: purple;
+}
+
+/*Selector de elementos subsecuentes*/
+#seleccion ~ li {
+  background-color: aqua;
+}
+
+/*Selector por posición*/
+.custom-list li:nth-of-type(7) {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.custom-list li:first-of-type {
+  font-family: arial;
+}
+
+.custom-list li:last-of-type {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.custom-list li:nth-of-type(even) {
+  background: #000;
+  color: white;
+}
+
+.custom-list li:nth-of-type(odd) {
+  background: white;
+  color: black;
+}
+
+/*Pseudoclases*/
+.custom-list li:hover {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+li:not(:last-of-type) {
+  text-decoration: underline;
+}

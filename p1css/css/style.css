@@ -1,0 +1,38 @@
+* {
+  font-family: arial;
+}
+
+header {
+  background-color: lime;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+nav {
+  background-color: green;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+aside,
+main {
+  border-radius: 0.5rem;
+  color: white;
+  margin-top: 1rem;
+  padding: 1rem;
+  height: 50vh;
+  display: inline-block;
+  vertical-align: top;
+}
+
+aside {
+  background-color: orange;
+  width: 25%;
+}
+
+main {
+  background: tomato;
+  width: calc(50% - 11rem);
+  margin-left: 2rem;
+  margin-right: 2rem;
+}

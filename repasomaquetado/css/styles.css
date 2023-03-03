@@ -1,0 +1,14 @@
+.image-wrapper {
+  padding-top: 100%;
+}
+
+#contact-tab.active + .extra-tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.extra-tabs {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */

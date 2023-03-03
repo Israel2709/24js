@@ -1,0 +1,135 @@
+$bodyBg: navy;
+$lightBlue: skyblue;
+$cardBg: skyblue;
+$work: green;
+$social: purple;
+$play: slategray;
+$care: pink;
+$excercise: peru;
+$study: darkred;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+body {
+  background-color: $bodyBg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  main {
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    aside {
+      width: 100%;
+      border-radius: 1rem;
+      .profile-card {
+        background: blue;
+        border-radius: 1rem;
+        .profile {
+          display: flex;
+          flex-direction: column;
+          padding: 1rem;
+          border-radius: 1rem;
+          color: white;
+          background-color: skyblue;
+          height: 200px;
+          justify-content: space-evenly;
+          img {
+            width: 50px;
+            border-radius: 100%;
+            margin-bottom: 1rem;
+          }
+        }
+        .selector {
+          list-style: none;
+          color: gray;
+          padding: 1rem;
+          li.active {
+            color: white;
+          }
+        }
+      }
+    }
+    section {
+      width: 100%;
+    }
+  }
+}
+
+.card {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: salmon;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: flex-end;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  .content {
+    height: 200px;
+    padding: 1rem;
+    background-color: $cardBg;
+    display: flex;
+    flex-direction: column;
+    .heading {
+      display: flex;
+      justify-content: space-between;
+    }
+    .time-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &.exercise {
+    background-color: $excercise;
+  }
+  &.play {
+    background-color: $play;
+  }
+  &.study {
+    background-color: $study;
+  }
+  &.care {
+    background-color: $care;
+  }
+  &.work {
+    background-color: $work;
+  }
+  &.social {
+    background-color: $social;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    main {
+      aside {
+        width: 30%;
+      }
+      section {
+        width: 70%;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+    }
+  }
+  .card {
+    width: 30%;
+    .content {
+      .time-wrapper {
+        flex-direction: column;
+      }
+    }
+  }
+}
