@@ -266,7 +266,9 @@ let products = [
     },
   },
 ];
-
+{
+}
+/*
 1.- crear una función que me devuelva un producto específico basado en su id
 2.- crear una función que me entregue los productos con el mejor rating ( aquellos con más de 4 puntos de rating)
 3.- crear una función que me devuelva una lista con los nombres de los productos y su costo en strings
@@ -280,3 +282,4 @@ let products = [
 8.- crear una función que me devuelva los 5 productos más costosos de la lista
 9.- crear una función que me devuelva todos los productos de una categoría específica
 10.- crear una función que reciba un monto y me devuelva el producto más costoso que pueda comprar con ese monto
+*/
