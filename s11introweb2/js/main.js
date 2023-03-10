@@ -173,3 +173,54 @@ let people = [
     nat: "MX",
   },
 ];
+
+/*<tr> 
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>*/
+
+const createTable = (people) => {
+  /*{
+    gender: "male",
+    name: {
+      title: "Mr",
+      first: "Pimen",
+      last: "Dreveckiy",
+    },
+    registered: {
+      date: "2012-10-17T22:58:40.011Z",
+      age: 10,
+    },
+    id: {
+      name: "",
+      value: null,
+    },
+    nat: "UA",
+  }*/
+  people.forEach((person) => {
+    let { name, id, nat, registered } = person;
+    let { title, first, last } = name;
+    let { name: idName, value } = id;
+    let peopleRow = document.createElement("tr");
+    let rowClass = registered.age <= 10 ? "bg-danger" : "bg-success";
+    peopleRow.classList.add(rowClass);
+
+    let tdName = document.createElement("td");
+    let tdNationality = document.createElement("td");
+    let tdId = document.createElement("td");
+
+    let nameText = document.createTextNode(`${title} ${first} ${last}`);
+    let natText = document.createTextNode(nat);
+    let idText = document.createTextNode(`${idName}:${value}`);
+
+    tdName.appendChild(nameText);
+    tdNationality.appendChild(natText);
+    tdId.appendChild(idText);
+
+    peopleRow.append(tdName, tdNationality, tdId);
+
+    document.getElementById("people-wrapper").appendChild(peopleRow);
+  });
+};
