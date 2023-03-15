@@ -94,3 +94,12 @@ const fillTable = (data, tableId) => {
 };
 
 fillTable(peopleArray, "person-table");
+
+document
+  .querySelectorAll("#radio-wrapper input[type='radio']")
+  .forEach((radio) => {
+    radio.addEventListener("change", (event) => {
+      console.log(event.target);
+      console.log(event.target.value);
+    });
+  });
