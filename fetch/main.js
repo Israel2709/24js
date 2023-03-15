@@ -10,24 +10,54 @@ const getKoders = async () => {
   return data;
 };
 
-const getProducts = async () => {
+const printKoders = async () => {
+  let koders = await getKoders();
+  console.log(koders);
+  let kodersKeysArray = Object.keys(koders);
+  kodersKeysArray.forEach((key) => {
+    let { name } = koders[key];
+    console.log(key);
+    console.log(koders[key]);
+    let heading = document.createElement("h1");
+    heading.innerText = name;
+    document.body.appendChild(heading);
+  });
+};
+
+const deleteKoder = async (koderKey) => {
   let response = await fetch(
-    "https://kodemia-24g-default-rtdb.firebaseio.com/products/.json"
+    `https://kodemia-24g-default-rtdb.firebaseio.com/koders/${koderKey}/.json`,
+    {
+      method: "DELETE",
+    }
   );
   let data = await response.json();
   return data;
 };
 
-const printKoders = () => {
-  getKoders().then((koders) => {
-    document.write(JSON.stringify(koders));
-  });
+const createKoder = async (koderObject) => {
+  let response = await fetch(
+    "https://kodemia-24g-default-rtdb.firebaseio.com/koders/.json",
+    {
+      method: "POST",
+      body: JSON.stringify(koderObject),
+    }
+  );
+  let data = await response.json();
+  console.log(data);
+  return data;
 };
 
-const printProducts = () => {
-  getProducts().then((products) => {
-    document.write(JSON.stringify(products));
-  });
+printKoders();
+
+const createFromForm = () => {
+  createKoder({ name: "x" });
 };
 
-printProducts();
+const deleteFromButton = () => {
+  deleteKoder("koder1");
+};
+
+document.getElementById("delete").addEventListener("click", () => {
+  deleteFromButton();
+});
