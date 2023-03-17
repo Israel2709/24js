@@ -1,4 +1,4 @@
-const createCard = (imgSrc, titleText, pText, btnText, link) => {
+const createCard = (imgSrc, titleText, pText, btnText, link, buttonHandler) => {
   // Create card
   let divCard = document.createElement("div");
   divCard.classList.add("card");
@@ -14,6 +14,9 @@ const createCard = (imgSrc, titleText, pText, btnText, link) => {
   pCard.classList.add("card-text");
   let btn = document.createElement("a");
   btn.classList.add("btn", "btn-primary");
+  btn.addEventListener("click", () => {
+    buttonHandler({ imgSrc, titleText, pText });
+  });
   // Create content
   cardTitle.innerText = titleText;
   pCard.innerText = pText;

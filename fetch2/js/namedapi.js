@@ -17,4 +17,16 @@ const getKoders = async () => {
   return data;
 };
 
-export { deleteKoder, getKoders as obtenerKoders };
+const addTestObject = async (objectData) => {
+  let response = await fetch(
+    `https://kodemia-24g-default-rtdb.firebaseio.com/cardTest/.json`,
+    {
+      method: "POST",
+      body: JSON.stringify(objectData),
+    }
+  );
+  let data = await response.json();
+  return data;
+};
+
+export { deleteKoder, getKoders as obtenerKoders, addTestObject };

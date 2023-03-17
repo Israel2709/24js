@@ -1,6 +1,6 @@
 import { text } from "./myModule.js";
 //import api from "./api.js";
-import { obtenerKoders } from "./namedapi.js";
+import { obtenerKoders, addTestObject } from "./namedapi.js";
 import { createCard } from "./createDom.js";
 
 const testApi = async () => {
@@ -38,7 +38,9 @@ const printCards = () => {
     let { imgSrc, titleText, pText, btnText, link } = item;
     let col = document.createElement("div");
     col.classList.add("col");
-    col.appendChild(createCard(imgSrc, titleText, pText, btnText, link));
+    col.appendChild(
+      createCard(imgSrc, titleText, pText, btnText, link, addTestObject)
+    );
     wrapper.append(col);
   });
 };
