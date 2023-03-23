@@ -1,8 +1,9 @@
-let arr3 = [1, 11, 5, 6, 5, 4];
-let number = 4;
+let name = "Israel Salinas Martínez";
 
-let r = arr3.find((item) => item === number);
-console.log(r);
+const initials = (str) => {
+  const arraySplit = str.toUpperCase().split(" ");
+  return arraySplit.reduce((total, current) => total + current.charAt(0), 0);
+};
 
-let r2 = arr3.indexOf(number);
-console.log(r2);
+let test = initials(name);
+console.log(test);

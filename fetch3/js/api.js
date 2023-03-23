@@ -10,4 +10,10 @@ const getProductById = async (id) => {
   return data;
 };
 
-export { getProducts, getProductById };
+const getRickAndMortyChars = async () => {
+  let response = await fetch("https://rickandmortyapi.com/api/character");
+  let data = await response.json();
+  return data.results;
+};
+
+export { getProducts, getProductById, getRickAndMortyChars };
